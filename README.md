@@ -1,7 +1,7 @@
 # dash_board
 get center of shape of dash board
 
-## Image-to-image translation at 2k/1k resolution
+## Position the center of the dash board
 
 - My src image
 <p align='center'>  
@@ -22,6 +22,9 @@ get center of shape of dash board
 - get center of circle results
 <p align='center'>  
   <img src='result/img_center732.jpg' width='400'/>
+</p>
+<p align='center'>  
+  <img src='result/1_0732.jpg' width='400'/>
 </p>
 
 # Usage
