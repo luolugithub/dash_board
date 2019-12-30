@@ -4,20 +4,25 @@
 # @Email   : argluolu@gmail.com
 # @File    : binary_img.py
 # @Software: PyCharm
+import glob
+import os
 
 import cv2 as cv
 import numpy as np
 
 
 # 全局阈值
-def threshold_demo(image):
+from PIL import Image
+
+
+def threshold_binary(image, base_name):
     gray = cv.cvtColor(image, cv.COLOR_RGB2GRAY)  # 把输入图像灰度化
     # 直接阈值化是对输入的单通道矩阵逐像素进行阈值分割。
     ret, binary = cv.threshold(gray, 125, 255, cv.THRESH_BINARY_INV)
     print("threshold value %s" % ret)
     # cv.namedWindow("binary_all", cv.WINDOW_NORMAL)
     # cv.imshow("binary0", binary)
-    cv.imwrite("/home/luolu/PycharmProjects/BONC Cloudiip/result/binary_all732.jpg", binary)
+    cv.imwrite("/home/luolu/PycharmProjects/BONC Cloudiip/center_result/" + base_name, binary)
 
 
 # 局部阈值
@@ -45,10 +50,13 @@ def custom_threshold(image):
 
 
 src = cv.imread('/home/luolu/PycharmProjects/BONC Cloudiip/image/1_0732.jpg')
-# cv.namedWindow('input_image', cv.WINDOW_NORMAL)  # 设置为WINDOW_NORMAL可以任意缩放
-# cv.imshow('input_image', src)
-threshold_demo(src)
-bin_img = local_threshold(src)
-print(bin_img.shape)
-# custom_threshold(src)
+if __name__ == '__main__':
+    for filename in glob.glob('/home/luolu/PycharmProjects/BONC Cloudiip/image/*.jpg'):
+        img = cv.imread(filename)
+        print(filename)
+        base_name = os.path.basename(filename)
+        print(base_name)
+        threshold_binary(img, base_name)
+
+
 
