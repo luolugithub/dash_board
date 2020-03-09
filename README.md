@@ -4,8 +4,8 @@ get center of shape of dash board
 ## Position the center of the dash board
 
 - My src image
-<p align='center'>  
-  <img src='result/1_0732.jpg' width='400'/>
+<p align='left'>  
+  <img src='result/1_0160.jpg' width='400'/>
 </p>
 - binary results
 <p align='center'>  
