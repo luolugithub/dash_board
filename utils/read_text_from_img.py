@@ -4,6 +4,10 @@
 # @Email   : argluolu@gmail.com
 # @File    : read_text_from_img.py
 # @Software: PyCharm
+import glob
+import cv2 as cv
+import numpy as np
+import csv
 
 try:
     from PIL import Image
@@ -21,4 +25,15 @@ def ocr_core(filename):
     return text.replace("\n", " ").strip()
 
 
-print(ocr_core('../label/1_0871.jpg'))
+# print(ocr_core('../images/gen.jpg'))
+if __name__ == '__main__':
+    f = open('/home/luolu/PycharmProjects/BONC Cloudiip/submit_bonc.csv', 'w')
+
+    for filename in glob.glob('/home/luolu/PycharmProjects/BONC Cloudiip/label/*.jpg'):
+        img = cv.imread(filename)
+        # print(filename)
+        base_name = cv.os.path.basename(filename)
+        print(base_name)
+        f.write(base_name + ';' + ocr_core(filename) + '\n')
+
+    f.close()
