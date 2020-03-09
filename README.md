@@ -31,6 +31,7 @@ get center of shape of dash board
 <p align='left'>  
   <img src='result/crop_img_center732.jpg' width='400'/>
   <img src='result/1828.jpg' width='400'/>
+  <img src='result/1_0000.jpg' width='400'/>
 </p>
 
 
