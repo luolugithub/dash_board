@@ -27,6 +27,14 @@ get center of shape of dash board
   <img src='result/result_1_0732.jpg' width='400'/>
 </p>
 
+# croped results
+<p align='left'>  
+  <img src='result/crop_img_center732.jpg' width='400'/>
+</p>
+<p align='center'>  
+  <img src='result/1828.jpg' width='400'/>
+</p>
+
 # Usage
 - create center_result folder at your root path
 - replace image path
