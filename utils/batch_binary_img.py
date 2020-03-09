@@ -51,7 +51,7 @@ def custom_threshold(image):
 
 src = cv.imread('/home/luolu/PycharmProjects/BONC Cloudiip/image/1_0732.jpg')
 if __name__ == '__main__':
-    for filename in glob.glob('/home/luolu/PycharmProjects/BONC Cloudiip/image/*.jpg'):
+    for filename in glob.glob('/home/luolu/PycharmProjects/BONC Cloudiip/crop_image/*.jpg'):
         img = cv.imread(filename)
         print(filename)
         base_name = os.path.basename(filename)

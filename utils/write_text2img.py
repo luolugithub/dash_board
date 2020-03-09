@@ -23,7 +23,7 @@ if __name__ == '__main__':
         print("file_name: ", file_name)
         file_content = file.split("____")[1]
         print("file_content: ", file_content)
-        img = Image.new('RGB', (800, 800), color='white')
+        img = Image.new('RGB', (782, 782), color='white')
         d = ImageDraw.Draw(img)                                                                   
         root = tk.Tk()
         font = ImageFont.truetype('../91bold.ttf', 180)

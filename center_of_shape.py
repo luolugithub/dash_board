@@ -33,10 +33,10 @@ for c in cnts:
 	cY = int(M["m01"] / M["m00"])
 
 	# draw the contour and center of the shape on the image
-	cv2.drawContours(image, [c], -1, (0, 255, 0), 2)
+	cv2.drawContours(image, [c], -1, (0, 0, 255), 8)
 	cv2.circle(image, (cX, cY), 7, (255, 255, 255), -1)
 	cv2.putText(image, "center" + "(" + str(cX) + ", " + str(cY) + ")", (cX - 20, cY - 20),
-		cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+		cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), 4)
 
 	# show the image
 	# cv2.imshow("Image", image)
